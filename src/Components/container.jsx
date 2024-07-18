@@ -27,7 +27,7 @@ function container() {
       <div className="column center">
         <OverviewContent />
       </div>
-      <div className="column right">
+      <div className="column right" style={{ width: "448px" }}>
         <Weekly />
       </div>
     </div>
