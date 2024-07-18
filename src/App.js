@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "./Components/Footer";
 import LandingPage from "./Components/LandingPage";
 import NavBar from "./Components/NavBar";
+import NavBarLog from "./Components/NavBarLog";
 import SignUp from "./Components/SignUp";
 import SignIn from "./Components/SignIn";
 import HomeNavbar from "./Components/HomeNavbar";
@@ -25,7 +26,7 @@ function ProtectedRoute({ children }) {
 function HomePageLayout() {
   return (
     <>
-      <NavBar />
+      <NavBarLog />
       {/* <Sidebar /> */}
       <Overview />
     </>
