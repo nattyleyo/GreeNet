@@ -46,7 +46,7 @@ function Sidebar() {
         Menu
       </span>
       <ul className="sidebar-menu">
-        <li className="sidebar-item">
+        <a className="sidebar-item" href="#overview">
           <svg
             // style={{ stroke: "white" }}
             width="21"
@@ -91,8 +91,8 @@ function Sidebar() {
           </svg>
 
           <span>Overview</span>
-        </li>
-        <li className="sidebar-item">
+        </a>
+        <a href="#market-data" className="sidebar-item">
           <svg
             width="21"
             height="22"
@@ -135,8 +135,8 @@ function Sidebar() {
           </svg>
 
           <span>Market Data</span>
-        </li>
-        <li className="sidebar-item">
+        </a>
+        <a href="#weather" className="sidebar-item">
           <svg
             width="23"
             height="23"
@@ -187,8 +187,8 @@ function Sidebar() {
           </svg>
 
           <span>Wheather</span>
-        </li>
-        <li className="sidebar-item">
+        </a>
+        <a href="#maps" className="sidebar-item">
           <svg
             width="21"
             height="22"
@@ -217,9 +217,9 @@ function Sidebar() {
           </svg>
 
           <span>Interactive Maps</span>
-        </li>
+        </a>
 
-        <li className="sidebar-item">
+        <a href="#community" className="sidebar-item">
           <svg
             width="21"
             height="22"
@@ -266,7 +266,7 @@ function Sidebar() {
           </svg>
 
           <span>Community</span>
-        </li>
+        </a>
         <span
           style={{
             width: "100%",
@@ -278,7 +278,7 @@ function Sidebar() {
           Personal
         </span>
 
-        <li className="sidebar-item">
+        <a href="#" className="sidebar-item">
           <svg
             width="21"
             height="22"
@@ -319,8 +319,8 @@ function Sidebar() {
           </svg>
 
           <span>Watch List</span>
-        </li>
-        <li className="sidebar-item">
+        </a>
+        <a href="#" className="sidebar-item">
           <svg
             width="21"
             height="22"
@@ -367,15 +367,15 @@ function Sidebar() {
           </svg>
 
           <span>Dark Mode</span>
-        </li>
-        <li className="sidebar-item x" style={{ margintop: "18px" }}>
+        </a>
+        <a href="#" className="sidebar-item x" style={{ margintop: "18px" }}>
           <FontAwesomeIcon
             icon={faSignOutAlt}
             style={{ color: "#29BB49" }}
             className="ic"
           />
           <span>Logout</span>
-        </li>
+        </a>
       </ul>
     </div>
   );

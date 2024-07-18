@@ -9,7 +9,7 @@ const data = [
     volume: "368,90",
     rank: 1,
     gain: "15%",
-    trend: "up",
+    trend: "../assets/icons/logo.svg",
   },
   {
     crop: "Barley",
@@ -18,7 +18,7 @@ const data = [
     volume: "368,90",
     rank: 2,
     gain: "3%",
-    trend: "up",
+    trend: "../assets/icons/green.svg",
   },
   {
     crop: "Maize",
@@ -27,7 +27,7 @@ const data = [
     volume: "368,90",
     rank: 3,
     gain: "-7%",
-    trend: "down",
+    trend: "../assets/icons/green.svg",
   },
 ];
 function CropList() {
@@ -54,7 +54,7 @@ function CropList() {
                 <span>{item.company}</span>
               </td>
               <td>
-                <div className={`chart ${item.trend}`}></div>
+                <img src={item.trend} alt="" />
               </td>
               <td>{item.price}</td>
               <td>{item.volume}</td>
