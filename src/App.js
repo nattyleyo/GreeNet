@@ -8,59 +8,68 @@ import HomeNavbar from "./Components/HomeNavbar";
 import Sidebar from "./Components/Sidebar";
 import Overview from "./Components/container";
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+	useLocation,
 } from "react-router-dom";
 import { AuthProvider, useAuth } from "./AuthContext";
 import Weekly from "./Components/Weekly";
+import D1Farmer from "./Components/D1Farmer"; // Import the D1Farmer component
+import D2Farmer from "./Components/D2Farmer"; // Import the D2Farmer component
+import D3Farmer from "./Components/D3Farmer"; // Import the D3Farmer component
+import D4Farmer from "./Components/D4Farmer"; // Import the D4Farmer component
 
 function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : <Navigate to="/sign-in" />;
+	const { isAuthenticated } = useAuth();
+	return isAuthenticated ? children : <Navigate to="/sign-in" />;
 }
 
 function HomePageLayout() {
-  return (
-    <>
-      <NavBar />
-      {/* <Sidebar /> */}
-      <Overview />
-    </>
-  );
+	return (
+		<>
+			<NavBar />
+			{/* <Sidebar /> */}
+			<Overview />
+		</>
+	);
 }
 
 function App() {
-  const { isAuthenticated } = useAuth();
+	const { isAuthenticated } = useAuth();
 
-  return (
-    <div className="App">
-      <Router>
-        {!isAuthenticated && <NavBar />}
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route
-            path="/homepage"
-            element={
-              <ProtectedRoute>
-                <HomePageLayout />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </Router>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				{!isAuthenticated && <NavBar />}
+				<Routes>
+					<Route path="/" element={<LandingPage />} />
+					<Route path="/sign-in" element={<SignIn />} />
+					<Route path="/sign-up" element={<SignUp />} />
+					<Route path="/personalize" element={<D1Farmer />} />
+					<Route path="/d2farmer" element={<D2Farmer />} />
+					<Route path="/d3farmer" element={<D3Farmer />} />{" "}
+					<Route path="/d4farmer" element={<D4Farmer />} />{" "}
+					{/* Add the route */}
+					<Route
+						path="/homepage"
+						element={
+							<ProtectedRoute>
+								<HomePageLayout />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
+			</Router>
+		</div>
+	);
 }
 
 export default function Root() {
-  return (
-    <AuthProvider>
-      <App />
-    </AuthProvider>
-  );
+	return (
+		<AuthProvider>
+			<App />
+		</AuthProvider>
+	);
 }
