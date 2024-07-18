@@ -110,7 +110,7 @@ function OverviewContent() {
       <MarketStatus />
       <CropList />
       <InteractiveMap />
-    {/* </div> */}
+    </div>
   );
 }
 
