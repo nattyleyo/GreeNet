@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar";
 import NavBarLog from "./Components/NavBarLog";
 import SignUp from "./Components/SignUp";
 import SignIn from "./Components/SignIn";
+import Market from "./Components/Market";
 import HomeNavbar from "./Components/HomeNavbar";
 import Sidebar from "./Components/Sidebar";
 import Overview from "./Components/container";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/market-data" element={<Market />} />
           <Route
             path="/homepage"
             element={

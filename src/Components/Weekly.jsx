@@ -100,8 +100,8 @@ const Weekly = () => {
       </div>
 
       <div className="farming-tip card">
-        <h2>Farming Tip of the Day</h2>
         <img src={imggs} alt="Farming" />
+        <h2>Farming Tip of the Day</h2>
         <p>
           Learn new techniques and improve your farming skills with our tips.
         </p>
@@ -109,8 +109,8 @@ const Weekly = () => {
       </div>
 
       <div className="market-prices card">
-        <h2>Market prices of Agri-product</h2>
         <img src={imgg} alt="Market" />
+        <h2>Market prices of Agri-product</h2>
         <p>
           Learn new techniques and improve your farming skills with our tips.
         </p>

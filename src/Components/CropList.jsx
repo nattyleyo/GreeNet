@@ -59,7 +59,12 @@ function CropList() {
               <td>{item.price}</td>
               <td>{item.volume}</td>
               <td>{item.rank}</td>
-              <td className={item.trend}>{item.gain}</td>
+              <td
+                className={item.trend}
+                style={{ color: `${item.gain > 0 ? "#0dd80d" : "red"}` }}
+              >
+                {item.gain}{" "}
+              </td>
             </tr>
           ))}
         </tbody>
