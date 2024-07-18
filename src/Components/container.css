@@ -16,11 +16,12 @@
 }
 .column.left,
 .column.right {
-  width: 25%;
+  width: 24%;
 }
-
-.column.right {
-  width: 30%;
+.dash-title {
+  font-size: 32px;
+  margin: 0px 12px 12px 12px;
+  font-weight: 700;
 }
 .center {
   width: 50%;
@@ -28,15 +29,22 @@
 .overview-content {
   /* padding: 20px; */
   width: 100%; /* Take full width */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .overview-cards {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  height: 206px;
 }
 
 .overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   color: #82e795;
   flex: 1 1;
   margin: 0 10px;
@@ -59,8 +67,8 @@
 }
 
 .circular-progress-wrapper {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 10px;
 }
 
@@ -74,14 +82,21 @@
 }
 .top-t {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
+.top-t .title {
+  color: #0e0d0d;
+  font-weight: 600;
+}
 .change-indicator.up {
+  height: 20px;
   display: flex;
   align-items: center;
   gap: 4px;
   background-color: #29bb491c;
   color: #29bb49;
+  padding: 2px 12px;
 }
 
 .change-indicator.down {

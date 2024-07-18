@@ -37,15 +37,23 @@ function container() {
 function OverviewContent() {
   return (
     <div className="overview-content">
+      <div className="dash-title">Overview</div>
       <div className="overview-cards">
         <div className="overview-card">
           <div className="top-t">
-            <h3>Temperature</h3>
+            <div className="title">Temperature</div>
             <div className="change-indicator up">
-              <FontAwesomeIcon icon={faArrowUp} /> 5%
+              <FontAwesomeIcon icon={faArrowUp} /> <span>5%</span>
             </div>
           </div>
-          <div className="circular-progress-wrapper">
+          <div
+            className="circular-progress-wrapper"
+            style={{
+              stroke: "#29BB49",
+              strokedasharray: "289.027px, 289.027px",
+              strokedashoffset: "0px",
+            }}
+          >
             <CircularProgressbar
               value={37}
               text={`${37}°C`}
@@ -59,9 +67,11 @@ function OverviewContent() {
           {/* <FontAwesomeIcon icon={faTemperatureHigh} className="weather-icon" /> */}
         </div>
         <div className="overview-card">
-          <h3>Humidity</h3>
-          <div className="change-indicator down">
-            <FontAwesomeIcon icon={faArrowDown} /> 5%
+          <div className="top-t">
+            <div className="title">Humidity</div>
+            <div className="change-indicator down">
+              <FontAwesomeIcon icon={faArrowDown} /> 5%
+            </div>
           </div>
           <div className="circular-progress-wrapper">
             <CircularProgressbar
@@ -77,14 +87,16 @@ function OverviewContent() {
           {/* <FontAwesomeIcon icon={faTint} className="weather-icon" /> */}
         </div>
         <div className="overview-card">
-          <h3>Precipitation</h3>
-          <div className="change-indicator up">
-            <FontAwesomeIcon icon={faArrowUp} /> 15%
+          <div className="top-t">
+            <div className="title">Precipitation</div>
+            <div className="change-indicator up">
+              <FontAwesomeIcon icon={faArrowUp} /> <span>7%</span>
+            </div>
           </div>
           <div className="circular-progress-wrapper">
             <CircularProgressbar
-              value={5}
-              text={`${5}%`}
+              value={37}
+              text={`${37}°C`}
               styles={buildStyles({
                 pathColor: "#fff",
                 textColor: "#000",
@@ -92,7 +104,7 @@ function OverviewContent() {
               })}
             />
           </div>
-          {/* <FontAwesomeIcon icon={faCloud} className="weather-icon" /> */}
+          {/* <FontAwesomeIcon icon={faTemperatureHigh} className="weather-icon" /> */}
         </div>
       </div>
       <MarketStatus />

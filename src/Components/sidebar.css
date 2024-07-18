@@ -1,11 +1,13 @@
 .sidebar {
-  width: 322px;
+  position: fixed;
+  top: 76px;
+  width: 275px;
   background-color: #ffffff;
   /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px;
+  padding: 32px;
   box-shadow: -1px -2px 5px #29bb4900;
   border: 1px solid #29bb4945;
   /* margin: 10px; */
@@ -38,11 +40,23 @@
 }
 .side-title {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .sidebar-item:hover {
-  background-color: #29bb4931;
-  /* color: white; */
+  background-color: #29bb49;
+  color: white;
+  font-size: 24px;
+}
+.x:hover .ic {
+  color: white;
+  font-size: 24px;
+}
+.sidebar-item svg {
+  stroke: black;
+}
+.sidebar-item:hover svg {
+  stroke: white;
+  font-size: 24px;
 }
 
 .sidebar-item span {
