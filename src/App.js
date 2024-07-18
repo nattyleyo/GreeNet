@@ -1,9 +1,12 @@
 import React from "react";
+
 import Footer from "./Components/Footer";
 import LandingPage from "./Components/LandingPage";
 import NavBar from "./Components/NavBar";
+import NavBarLog from "./Components/NavBarLog";
 import SignUp from "./Components/SignUp";
 import SignIn from "./Components/SignIn";
+import Market from "./Components/Market";
 import HomeNavbar from "./Components/HomeNavbar";
 import Sidebar from "./Components/Sidebar";
 import Overview from "./Components/container";
@@ -47,11 +50,6 @@ function App() {
 					<Route path="/" element={<LandingPage />} />
 					<Route path="/sign-in" element={<SignIn />} />
 					<Route path="/sign-up" element={<SignUp />} />
-					<Route path="/personalize" element={<D1Farmer />} />
-					<Route path="/d2farmer" element={<D2Farmer />} />
-					<Route path="/d3farmer" element={<D3Farmer />} />{" "}
-					<Route path="/d4farmer" element={<D4Farmer />} />{" "}
-					{/* Add the route */}
 					<Route
 						path="/homepage"
 						element={

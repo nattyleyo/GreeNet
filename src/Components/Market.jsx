@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 import React from "react";
-import "./container.css";
+import "./Market.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown,
@@ -13,12 +15,13 @@ import "react-circular-progressbar/dist/styles.css";
 import MarketStatus from "./MarketStatus";
 import CropList from "./CropList";
 import InteractiveMap from "./InteractiveMap";
-import Weekly from "./Weekly";
+import Weekly_Mar from "./Weekly_Mar";
 import Dashboard from "./Dashboard";
 import HomeNavbar from "./HomeNavbar";
+import Watchlist from "./Weekly_Mar";
 import Sidebar from "./Sidebar";
 
-function container() {
+function Market() {
   return (
     <div className="container">
       <div className="column left">
@@ -28,7 +31,8 @@ function container() {
         <OverviewContent />
       </div>
       <div className="column right" style={{ width: "448px" }}>
-        <Weekly />
+        {/* <Weekly_Mar /> */}
+        <Watchlist />
       </div>
     </div>
   );
@@ -37,81 +41,49 @@ function container() {
 function OverviewContent() {
   return (
     <div className="overview-content">
-      <div className="dash-title">Overview</div>
+      <div className="dash-title">Market</div>
+      <div className="search-bar">
+        <input type="text" placeholder="Find High Demand Area" />
+        <button type="button">Find</button>
+      </div>
       <div className="overview-cards">
         <div className="overview-card">
           <div className="top-t">
-            <div className="title">Temperature</div>
+            <div className="title">Maize</div>
             <div className="change-indicator up">
               <FontAwesomeIcon icon={faArrowUp} /> <span>5%</span>
             </div>
           </div>
-          <div
-            className="circular-progress-wrapper"
-            style={{
-              stroke: "#29BB49",
-              strokedasharray: "289.027px, 289.027px",
-              strokedashoffset: "0px",
-            }}
-          >
-            <CircularProgressbar
-              value={37}
-              text={`${37}°C`}
-              styles={buildStyles({
-                pathColor: "#fff",
-                textColor: "#000",
-                trailColor: "#32b871",
-              })}
-            />
-          </div>
-          {/* <FontAwesomeIcon icon={faTemperatureHigh} className="weather-icon" /> */}
         </div>
         <div className="overview-card">
           <div className="top-t">
-            <div className="title">Humidity</div>
+            <div className="title">Barley</div>
             <div className="change-indicator down">
               <FontAwesomeIcon icon={faArrowDown} /> 5%
             </div>
           </div>
-          <div className="circular-progress-wrapper">
-            <CircularProgressbar
-              value={10}
-              text={`${10}%`}
-              styles={buildStyles({
-                pathColor: "#fff",
-                textColor: "#000",
-                trailColor: "#32b871",
-              })}
-            />
-          </div>
-          {/* <FontAwesomeIcon icon={faTint} className="weather-icon" /> */}
         </div>
         <div className="overview-card">
           <div className="top-t">
-            <div className="title">Precipitation</div>
+            <div className="title">Wheat</div>
             <div className="change-indicator up">
               <FontAwesomeIcon icon={faArrowUp} /> <span>7%</span>
             </div>
           </div>
-          <div className="circular-progress-wrapper">
-            <CircularProgressbar
-              value={37}
-              text={`${37}°C`}
-              styles={buildStyles({
-                pathColor: "#fff",
-                textColor: "#000",
-                trailColor: "#32b871",
-              })}
-            />
+        </div>
+        <div className="overview-card">
+          <div className="top-t">
+            <div className="title">Rice</div>
+            <div className="change-indicator up">
+              <FontAwesomeIcon icon={faArrowUp} /> <span>7%</span>
+            </div>
           </div>
-          {/* <FontAwesomeIcon icon={faTemperatureHigh} className="weather-icon" /> */}
         </div>
       </div>
       <MarketStatus />
       <CropList />
-      <InteractiveMap />
     </div>
   );
 }
 
-export default container;
+export default Market;

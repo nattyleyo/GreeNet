@@ -1,5 +1,5 @@
 import React from "react";
-import "./CropList.css";
+import "./Weekly_Mar.css";
 
 const data = [
   {
@@ -30,10 +30,10 @@ const data = [
     trend: "../assets/icons/green.svg",
   },
 ];
-function CropList() {
+function Weekly_Mar() {
   return (
     <div className="croplist-container">
-      <h1>Croplist</h1>
+      <h1>Watchlist</h1>
       <table className="croplist-table">
         <thead>
           <tr>
@@ -74,4 +74,4 @@ function CropList() {
   );
 }
 
-export default CropList;
+export default Weekly_Mar;
