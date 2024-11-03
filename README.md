@@ -105,19 +105,3 @@ Dashboard Pages
 
 Farmer, Trader, and Government Official Dashboards with customized data and features.
 
-Installation
-
-Clone the repository:
-Copy code
-git clone https://github.com/Fasikagebrehana/GreeNET-Hackathon-Project.git
-
-Navigate to the project directory:
-cd GreenNet
-
-Install dependencies:
-
-npm install
-
-Run the development server:
-
-npm start
